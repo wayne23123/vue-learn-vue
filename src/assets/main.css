@@ -1,35 +1,544 @@
-@import './base.css';
+@import "./base.css";
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+@import "./base.css";
 
-  font-weight: normal;
+* {
+  box-sizing: border-box;
+  font-family: Arial, "PingFang SC", "Microsoft Yahei", sans-serif;
+  padding: 0;
+  margin: 0;
 }
 
-a,
-.green {
+html {
+  background-color: #000;
+}
+
+a {
+  color: initial;
   text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+ul {
+  list-style: none;
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+button {
+  border: none;
 }
+
+.cor17 {
+  color: #171717;
+}
+
+.fz6 {
+  transform: scale(0.5);
+  -webkit-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+}
+
+.fz12 {
+  font-size: 12px;
+}
+
+.fz14 {
+  font-size: 14px;
+}
+
+.fz16 {
+  font-size: 16px;
+}
+
+.fz18 {
+  font-size: 18px;
+}
+
+.fz20 {
+  font-size: 20px;
+}
+
+.fz22 {
+  font-size: 22px;
+}
+
+.fz24 {
+  font-size: 24px;
+}
+
+.fz26 {
+  font-size: 26px;
+}
+
+.fz28 {
+  font-size: 28px;
+}
+
+.fz30 {
+  font-size: 30px;
+}
+
+.fz32 {
+  font-size: 32px;
+}
+
+.fz34 {
+  font-size: 34px;
+}
+
+.fz36 {
+  font-size: 36px;
+}
+
+.fz38 {
+  font-size: 38px;
+}
+
+.fz40 {
+  font-size: 40px;
+}
+
+/* -------------------------------------------------------------------------- */
+.svgs:hover {
+  filter: invert(30%) sepia(100%) saturate(2000%) hue-rotate(100deg);
+  background-color: #87878745;
+  cursor: pointer;
+}
+
+.disInl {
+  display: inline-block;
+}
+
+.dis {
+  display: flex;
+}
+
+.col {
+  flex-direction: column;
+}
+
+.spa {
+  justify-content: space-between;
+}
+
+.spaAro {
+  justify-content: space-around;
+}
+
+.disCen {
+  display: flex;
+  justify-content: center;
+}
+
+.poa {
+  position: absolute;
+}
+
+.por {
+  position: relative;
+}
+
+.poaRT {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.poaLT {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.spo {
+  padding: 10px;
+  background-color: #292d3e;
+  border-radius: 12px;
+}
+
+.spoGra {
+  padding: 10px;
+  background-color: #3a3a3a;
+  border-radius: 12px;
+}
+
+.r0 {
+  right: 0;
+}
+
+.r10 {
+  right: 10px;
+}
+
+.padL5 {
+  padding: 0 0 0 5px;
+}
+
+.padT10 {
+  padding: 10px 0 0 0;
+}
+
+.padB10 {
+  padding: 0 0 10px 0;
+}
+
+.padL10 {
+  padding: 0 0 0 10px;
+}
+
+.padL15 {
+  padding: 0 0 0 15px;
+}
+
+.padL20 {
+  padding: 0 0 0 20px;
+}
+
+.padR10 {
+  padding: 0 10px 0 0;
+}
+
+.pad5 {
+  padding: 0 5px 0 5px;
+}
+
+.pad10 {
+  padding: 10px 10px 10px 10px;
+}
+
+.pad20 {
+  padding: 20px;
+}
+
+.pad204 {
+  padding: 20px 20px 20px 20px;
+}
+
+.mar10 {
+  margin: 0 10px 0 10px;
+}
+
+.marL20 {
+  margin: 0 0 0 20px;
+}
+
+.marL100 {
+  margin: 0 0 0 100px;
+}
+
+.marA {
+  margin: auto;
+}
+
+.fz1 {
+  font-size: 1.5rem;
+}
+.fz2 {
+  font-size: 3rem;
+}
+
+.pTwo {
+  text-indent: 2.5rem;
+}
+
+.padTwo {
+  padding: 0 0 0 50px;
+}
+
+.pFou {
+  text-indent: 5rem;
+}
+
+.pSix {
+  text-indent: 7.5rem;
+}
+
+.pEig {
+  text-indent: 10rem;
+}
+
+.pTen {
+  text-indent: 12.5rem;
+}
+
+.bor {
+  /* padding: 10px 10px 10px 10px; */
+  border: 1px solid #c4c4c4;
+  border-radius: 10px;
+}
+
+.borT {
+  /* padding: 10px 10px 10px 10px; */
+  border-top: 1px solid #c4c4c4;
+}
+
+.borR {
+  /* padding: 10px 10px 10px 10px; */
+  border-right: 1px solid #c4c4c4;
+}
+
+.borB {
+  /* padding: 10px 10px 10px 10px; */
+  border-bottom: 1px solid #c4c4c4;
+}
+
+.borL {
+  /* padding: 10px 10px 10px 10px; */
+  border-left: 1px solid #c4c4c4;
+}
+
+.tex {
+  text-decoration: line-through;
+}
+
+.cor29 {
+  color: #292d3e;
+}
+
+.bgcVS {
+  /* width: 100%; */
+  background-color: #292d3e;
+  border-radius: 30px;
+  padding: 100px 0 100px 80px;
+  overflow-x: auto;
+  margin: 80px 0;
+
+  font-size: 30px;
+}
+
+.bgcVSMid {
+  margin: 110px 0;
+  display: flex;
+  align-items: center;
+  font-size: 40px;
+  color: #676e95;
+  /* background-color: #1f222f; */
+  background-color: #292d3e;
+  border-right: 4px solid #1f222f;
+}
+
+.VSL {
+  border-left: 1px solid #676e95;
+}
+
+.w100 {
+  width: 100%;
+}
+
+.keyword {
+  color: #0077aa;
+  font-weight: bold;
+}
+
+.variable {
+  color: #82aaff;
+  /* color: #a6accd; */
+}
+
+.operator {
+  color: #82aaff;
+  /* color: #5f5f5f; */
+}
+
+.number {
+  color: #f78c6c;
+  /* color: #008000; */
+}
+
+.string {
+  color: #a31515;
+}
+
+.function {
+  color: #c792ea;
+  /* color: #6f42c1; */
+}
+
+.parameter {
+  color: #b2ccd6;
+  /* color: #0077aa; */
+}
+
+.comment {
+  /* color: #6a9955; */
+  color: #676e95;
+}
+
+.then {
+  color: #89ddff;
+}
+
+.tag {
+  color: #f07178;
+}
+
+.src {
+  color: #c3e88d;
+}
+
+.word {
+  color: #a6accd;
+}
+
+.brackets {
+  /* color: #ff5370; */
+  /* color: #b2ccd6; */
+  /* color: #ff5370; */
+  /* color: #ff5370; */
+  color: #ffcb6b;
+}
+
+.cur {
+  cursor: pointer;
+}
+
+.tra {
+  transition: all 1.5s ease;
+}
+
+.poa {
+  position: absolute;
+  z-index: 20;
+}
+
+.oveX {
+  overflow-x: auto;
+}
+
+/* A CSS 模板 ------------------------------------------------------------------------------------------------- */
+
+/* V 控制 Transition fade 動畫 ------------------------------------------------------------------------------------------------------- */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 2.1s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.fade-enter-to,
+.fade-leave-from {
+  opacity: 1;
+}
+
+/* left--------------------------------------------------------------------------------- */
+
+.listLeft-enter-active,
+.listLeft-leave-active {
+  transition: all 3s ease;
+}
+
+.listLeft-enter-from {
+  transform: translateX(-100%);
+}
+.listLeft-leave-to {
+  transform: translateX(100%);
+}
+
+.listLeft-leave-active,
+.listLeft-enter-active {
+}
+
+/* right--------------------------------------------------------------------------------- */
+
+.listRight-enter-active,
+.listRight-leave-active {
+  transition: all 3s ease;
+}
+
+.listRight-enter-from {
+  transform: translateX(100%);
+}
+.listRight-leave-to {
+  transform: translateX(-100%);
+}
+
+.listRight-leave-active,
+.listRight-enter-active {
+}
+
+/* up--------------------------------------------------------------------------------- */
+
+.listUp-enter-active,
+.listUp-leave-active {
+  transition: all 3s ease;
+}
+
+.listUp-enter-from {
+  transform: translateY(100%);
+  opacity: 0;
+}
+.listUp-leave-to {
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+/* A 控制 Transition fade 動畫 --------------------------------------------------------------------------------- */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  /* background: #4c4c4c; */
+  background: #444;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  /* background: #888; */
+  background: #666;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
+
+/* .toTop {
+  bottom: 170px;
+  right: 50px;
+  position: fixed;
+  z-index: 200;
+  background-color: #7f010190;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.toTop:hover {
+  background-color: #6f020250;
+}
+.toTopButton {
+  position: relative;
+  font-size: 20px;
+  bottom: 7px;
+  padding-left: 0;
+  color: #999;
+  pointer-events: none;
+}
+.toBot {
+  bottom: 100px;
+  right: 50px;
+  position: fixed;
+  z-index: 200;
+  background-color: #7f010190;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.toBot:hover {
+  background-color: #6f020250;
+}
+
+.toBotButton {
+  position: relative;
+  font-size: 20px;
+  bottom: 0;
+  padding-left: 0;
+  color: #999;
+  pointer-events: none;
+} */
