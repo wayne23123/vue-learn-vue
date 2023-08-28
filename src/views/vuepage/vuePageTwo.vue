@@ -52,8 +52,8 @@ function locate(idPound) {
     <div class="Main">
       <div class="mainContainer">
         <div class="mainLayout">
-          <div class="articleCardTitle cor36 fz30">[ vue ] ≫</div>
-          <p class="fz28"></p>
+          <div class="articleCardTitle cor36 fz32">[ vue ] ≫</div>
+          <p class="fz32">123</p>
           <br />
           <br />
 
@@ -501,13 +501,13 @@ section {
 }
 
 .articleCardTitle {
-  font-size: 1.75em;
+  /* font-size: 1.75em; */
   padding: 30px 5px 30px 5px;
 }
 
 .cor36 {
   color: #36c1cb;
-  font-size: 1.25em;
+  /* font-size: 1.25em; */
 }
 
 a {

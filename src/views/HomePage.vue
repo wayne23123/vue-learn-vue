@@ -13,7 +13,7 @@
           <br />
           <div class="btnContainer">
             <div>
-              <router-link to="/js"
+              <router-link to="/vue"
                 ><div class="btnL btn-background-slideL">
                   快速開始
                 </div></router-link
