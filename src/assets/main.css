@@ -497,20 +497,18 @@ button {
   background: #666;
 }
 
-/* .toTop {
+.toTop {
   bottom: 170px;
   right: 50px;
   position: fixed;
   z-index: 200;
-  background-color: #7f010190;
+  background-color: #6f020250;
   height: 60px;
   width: 60px;
   border-radius: 50%;
   cursor: pointer;
 }
-.toTop:hover {
-  background-color: #6f020250;
-}
+
 .toTopButton {
   position: relative;
   font-size: 20px;
@@ -519,19 +517,24 @@ button {
   color: #999;
   pointer-events: none;
 }
+
+.toTop:hover {
+  background-color: #7f010190;
+}
+
 .toBot {
   bottom: 100px;
   right: 50px;
   position: fixed;
   z-index: 200;
-  background-color: #7f010190;
+  background-color: #6f020250;
   height: 60px;
   width: 60px;
   border-radius: 50%;
   cursor: pointer;
 }
 .toBot:hover {
-  background-color: #6f020250;
+  background-color: #7f010190;
 }
 
 .toBotButton {
@@ -541,4 +544,4 @@ button {
   padding-left: 0;
   color: #999;
   pointer-events: none;
-} */
+}
