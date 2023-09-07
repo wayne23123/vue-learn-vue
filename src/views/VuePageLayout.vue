@@ -5,14 +5,14 @@
     <ul>
       <li>
         <!-- <RouterLink to="/js">主文章</RouterLink> -->
-        <RouterLink to="/vue">總結</RouterLink>
+        <RouterLink to="/vue/note">總結</RouterLink>
       </li>
       <!-- <li>
         <RouterLink to="/vue/jspractice">練習題</RouterLink>
       </li> -->
       <li>
         <!-- <RouterLink to="/js/jsthree">上課筆記</RouterLink> -->
-        <RouterLink to="/vue/note">筆記</RouterLink>
+        <RouterLink to="/vue/">上課筆記</RouterLink>
       </li>
     </ul>
   </div>

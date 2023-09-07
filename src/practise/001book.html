@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>001book</title>
+  </head>
+  <body>
+    <div id="app">
+      <h3>小黑書架</h3>
+      <ul>
+        <li v-for="(item, index) in booksList" :key="item.id">
+          <span>{{ item.name }}</span>
+          <span>{{ item.author }}</span>
+
+          <button @click="del(item.id)">删除</button>
+        </li>
+      </ul>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+      const app = new Vue({
+        el: "#app",
+        data: {
+          booksList: [
+            { id: 1, name: "《test1》", author: "111" },
+            { id: 2, name: "《test2》", author: "222" },
+            { id: 3, name: "《test3》", author: "333" },
+            { id: 4, name: "《test4》", author: "444" },
+          ],
+        },
+        methods: {
+          del(id) {
+            // console.log('删除', id)
+            // 通過 id 進行删除數組中的 對應項 → filter(不會改變原數組)
+            // filter: 根據條件，保留满足條件的對應項，得到一個新數組。
+            // console.log(this.booksList.filter(item => item.id !== id))
+            this.booksList = this.booksList.filter((item) => item.id !== id);
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
