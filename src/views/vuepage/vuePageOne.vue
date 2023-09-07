@@ -131,11 +131,19 @@ function locate(idPound) {
 
           <p class="fz28">MVVM . Model View ViewModel</p>
           <br />
-          <p class="fz28">Model . 數據層</p>
+          <p class="fz28 cor36">Model . 數據層</p>
+          <p class="fz28">負責資料存取 -> 與資料庫溝通、請求網路資源</p>
           <br />
-          <p class="fz28">View . 視圖層</p>
+          <p class="fz28 cor36">View . 視圖層</p>
+          <p class="fz28">負責顯示資料(UI)</p>
           <br />
-          <p class="fz28">ViewModel . 他是連接 Model 和 View 之間的橋梁</p>
+          <p class="fz28 cor36">
+            ViewModel . 他是連接 Model 和 View 之間的橋梁
+          </p>
+          <p class="fz28">
+            負責處理業務邏輯，並處理接收從 View 傳來的使用者操作事件、使用 Model
+            提供的方法來處理資料。
+          </p>
           <br />
           <br />
 
@@ -157,16 +165,55 @@ function locate(idPound) {
           <div id="onenote0" class="articleCardTitle cor36 fz30">
             [ vue ] ≫ MVVM 和 MVC 和 MVP 區別?
           </div>
-          <p class="fz28">M 數據 . . V 視圖 . . C 控制器</p>
-          <br />
+          <p class="fz28">MVC 是 model vue controller</p>
           <br />
           <p class="fz28">
-            MVC 是 model vue controller 分別對應 數據 , 視圖 , 控制器,
+            View 與使用者互動，當 View 接收到使用者的回饋 要拿資料時 , 呼叫
+            Controller , 請 Controller 操作 Model 拿取想要的資料 , Model
+            拿到資料後直接把資料丟回給 View , 把資料顯示給使用者
           </p>
+          <br />
+          <br />
+          <p class="fz28 cor36">Model . 數據層</p>
+          <p class="fz28">負責資料存取 -> 與資料庫溝通、請求網路資源</p>
+          <br />
+          <p class="fz28 cor36">View . 視圖層</p>
+          <p class="fz28">負責顯示資料(UI)</p>
+          <br />
+          <p class="fz28 cor36">Controller . 控制器</p>
+          <p class="fz28">
+            負責處理訊息、控制應用程式流程、處理事件並作出回應。
+          </p>
+          <br />
+          <br />
+          <p class="fz28">MVP 是 model vue presenter</p>
+          <br />
+          <p class="fz28">
+            和 MVC 差別 , Model 層拿到數據後 , 並不直接傳給 View
+            更新，而是交還給 Presenter , Presenter 再把數據交給 View ,
+            並更新畫面。
+          </p>
+          <br />
+          <br />
+          <p class="fz28 cor36">Model . 數據層</p>
+          <p class="fz28">負責資料存取 -> 與資料庫溝通、請求網路資源</p>
+          <br />
+          <p class="fz28 cor36">View . 視圖層</p>
+          <p class="fz28">負責顯示資料(UI)，並將使用者的操作傳給Presenter。</p>
+          <br />
+          <p class="fz28 cor36">Presenter</p>
+          <p class="fz28">負責處理業務邏輯，並負責View與Model的溝通。</p>
+          <br />
           <br />
           <br />
           <p class="fz28">
             MVVM 是 Model-View-ViewModel, 分別對應 數據, 視圖, VM
+          </p>
+          <br />
+          <p class="fz28">
+            MVVM 透過觀察者模式將 View 和 Model 連接在一起 , 一旦 Model
+            的數據發生變化 , 觀察者 View 就能夠感應到這個更動 , 並把數據更新到
+            UI 畫面上 , ViewModel 甚至不需要有 View 的引用，更方便單元測試。
           </p>
           <br />
           <br />
