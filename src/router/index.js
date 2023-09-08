@@ -34,6 +34,10 @@ const router = createRouter({
                   path: "",
                   component: VuePageTwoOne,
                 },
+                {
+                  path: "vue3",
+                  component: VuePageTwoTwo,
+                },
               ],
             },
             {

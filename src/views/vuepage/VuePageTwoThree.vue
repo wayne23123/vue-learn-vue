@@ -31,21 +31,17 @@ function locate(idPound) {
 
 <template>
   <section>
+    <!-- <div class="sectionHolderNav"></div> -->
     <!-- 左邊導航條 -->
     <div class="leftNav">
       <div class="leftNavContainer">
         <div class="leftNavLayout">
-          <br />
-          <!-- <RouterLink to="/js/jsthree">1.作用域</RouterLink> -->
-          <div>
-            <RouterLink to="/vue">1.作用域</RouterLink>
-          </div>
-          <div>
-            <RouterLink to="/vue/vue3">2. Vue3</RouterLink>
-          </div>
-          <div>
-            <RouterLink to="/vue">3.解構賦值</RouterLink>
-          </div>
+          <div @click="locate('')" class="leftNavText"></div>
+          <div @click="locate('')" class="leftNavText"></div>
+          <div @click="locate('')" class="leftNavText"></div>
+          <div @click="locate('')" class="leftNavText"></div>
+          <div @click="locate('')" class="leftNavText"></div>
+          <div @click="locate('')" class="leftNavText"></div>
         </div>
       </div>
     </div>
@@ -54,12 +50,23 @@ function locate(idPound) {
     <div class="Main">
       <div class="mainContainer">
         <div class="mainLayout">
-          <router-view />
+          <!-- 這裡 -->
+          <br />
+          <br />
+          <div class="articleCardTitle cor36 fz34">1. 差值表達式</div>
+          <p class="fz28"></p>
+          <br />
+          <p class="fz28"></p>
+          <br />
+          <p class="fz28"></p>
+          <br />
+          <p class="fz28"></p>
+          <br />
         </div>
       </div>
     </div>
   </section>
-  <!-- <div>
+  <div>
     <transition name="fade" tag="div" v-show="toTopRef">
       <div @click="toTopFunction" class="toTop">
         <div class="toTopButton">
@@ -76,21 +83,10 @@ function locate(idPound) {
         </div>
       </div>
     </transition>
-  </div> -->
+  </div>
 </template>
 
 <style scoped>
-a.router-link-exact-active {
-  color: #36c1cb;
-}
-
-.sectionHolderNav {
-  width: 100vw;
-  max-width: 100%;
-  height: 70px;
-  background-color: #171717;
-}
-
 section {
   width: 100vw;
   max-width: 100%;
@@ -102,18 +98,29 @@ section {
 .leftNav {
   font-size: 20px;
   position: fixed;
-  width: 19vw;
-  height: 100%;
-  background-color: #040404;
+  right: 80px;
+  top: 150px;
+  /* width: 19vw; */
+  /* height: 100%; */
+  /* background-color: #040404; */
+  background-color: rgba(0, 0, 0, 0.1);
   /* color: #36c1cb; */
-  color: #a1b6cb;
+  color: #a1b6cb4b;
   display: flex;
   justify-content: center;
   overflow: auto;
 }
 
+.leftNav:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  /* color: #36c1cb; */
+  color: #a1b6cb;
+  transition: all 0.2s ease;
+}
+
 .leftNavContainer {
-  padding: 25px 5px 0 5px;
+  /* padding: 25px 5px 0 5px; */
+  padding: 25px;
 }
 
 .leftNavText:hover {
@@ -123,16 +130,24 @@ section {
 }
 
 .Main {
-  position: relative;
+  /* position: relative; */
   /* background-color: #c4c4c4; */
   /* color: #36c1cb; */
   color: #a1b6cb;
-  width: 80vw;
-  left: 20vw;
+  /* width: 80vw; */
+  /* left: 20vw; */
 }
 
 .mainContainer {
   padding: 0 50px;
+}
+
+.articleCardTitle {
+  padding: 30px 5px 30px 5px;
+}
+
+.cor36 {
+  color: #36c1cb;
 }
 
 a {
