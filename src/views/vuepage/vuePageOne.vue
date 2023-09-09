@@ -478,102 +478,212 @@ function locate(idPound) {
           <div class="articleCardTitle cor36 fz30">
             [ vue ] ≫ 雙向綁定使用和原理?
           </div>
-          <p class="fz28">vue2 實現雙向綁定 的原理是</p>
-          <br />
-          <br />
-          <p class="fz28">通過數據劫持 和 發佈訂閱模式 實現</p>
-          <br />
-          <br />
-          <p class="fz28">先通過 object.definedproperty 方法</p>
-          <br />
-          <br />
-          <p class="fz28">對數據進行劫持 監聽數據的變化</p>
-          <br />
-          <br />
-          <p class="fz28">並通過 getter 和 setter 方法 對數據 進行 讀寫</p>
-          <br />
-          <br />
-          <p class="fz28">Vue 通過 發布 訂閱模式 , 維護一個訂閱者數組</p>
-          <br />
-          <br />
-          <p class="fz28">當數據發生變化</p>
-          <br />
-          <br />
-          <p class="fz28">Vue 會通知 所有 訂閱者 進行更新</p>
-          <br />
-          <br />
-          <p class="fz28">因此 當用戶 在頁面上 進行修改時</p>
-          <br />
-          <br />
-          <p class="fz28">Vue 會更新 對應數據</p>
-          <br />
-          <br />
-          <p class="fz28">並通知 所有訂閱者 更新 視圖</p>
-          <br />
-          <br />
-          <p class="fz28">同時 數據發生變化時 Vue 也會更新 對應的 視圖</p>
-          <br />
-          <br />
-          <p class="fz28">比如 當我在 輸入框中 輸入文字時</p>
-          <br />
-          <br />
-          <p class="fz28">Vue 會檢測到 數據的 變化</p>
-          <br />
-          <br />
-          <p class="fz28">然後更新對應的 視圖</p>
-          <br />
-          <br />
-          <p class="fz28">如果 通過代碼修改數據</p>
-          <br />
-          <br />
-          <p class="fz28">vue 也會更新視圖</p>
-          <br />
-          <br />
-          <p class="fz28 cor36"># vue2 和 vue3 v-model 差別?</p>
+          <div class="dis">
+            <div>
+              <p class="fz28">vue2 實現雙向綁定 的原理是</p>
+              <br />
+              <br />
+              <p class="fz28">通過數據劫持 和 發佈訂閱模式 實現</p>
+              <br />
+              <br />
+              <p class="fz28">先通過 object.definedproperty 方法</p>
+              <br />
+              <br />
+              <p class="fz28">對數據進行劫持 監聽數據的變化</p>
+              <br />
+              <br />
+              <p class="fz28">並通過 getter 和 setter 方法 對數據 進行 讀寫</p>
+              <br />
+              <br />
+              <p class="fz28">Vue 通過 發布 訂閱模式 , 維護一個訂閱者數組</p>
+              <br />
+              <br />
+              <p class="fz28">當數據發生變化</p>
+              <br />
+              <br />
+              <p class="fz28">Vue 會通知 所有 訂閱者 進行更新</p>
+              <br />
+              <br />
+              <p class="fz28">因此 當用戶 在頁面上 進行修改時</p>
+              <br />
+              <br />
+              <p class="fz28">Vue 會更新 對應數據</p>
+              <br />
+              <br />
+              <p class="fz28">並通知 所有訂閱者 更新 視圖</p>
+              <br />
+              <br />
+              <p class="fz28">同時 數據發生變化時 Vue 也會更新 對應的 視圖</p>
+              <br />
+              <br />
+              <p class="fz28">比如 當我在 輸入框中 輸入文字時</p>
+              <br />
+              <br />
+              <p class="fz28">Vue 會檢測到 數據的 變化</p>
+              <br />
+              <br />
+              <p class="fz28">然後更新對應的 視圖</p>
+              <br />
+              <br />
+              <p class="fz28">如果 通過代碼修改數據</p>
+              <br />
+              <br />
+              <p class="fz28">vue 也會更新視圖</p>
+              <br />
+              <br />
+              <p class="fz28 cor36"># vue2 和 vue3 v-model 差別?</p>
 
-          <br />
-          <br />
-          <p class="fz28">
-            vue3把 v-model 和 sync 合併成新的v-model , 用法是 .sync 那種用法
-          </p>
-          <br />
-          <br />
+              <br />
+              <br />
+              <p class="fz28">vue3把 v-model 和 sync 合併成新的v-model</p>
+              <br />
+              <p class="fz28">用法是 .sync 那種用法</p>
+              <br />
+              <br />
 
-          <p class="fz28 cor36"># 訂閱者</p>
-          <br />
-          <br />
-          <p class="fz28">在 vue 中 每一個 掛載到 視圖上 的組件</p>
-          <br />
-          <br />
-          <p class="fz28">或 每一個 watcher</p>
-          <br />
-          <br />
-          <p class="fz28">都可 被看作是 一個 訂閱者</p>
-          <br />
-          <br />
-          <p class="fz28">他們 訂閱了 某一個 數據的變化</p>
-          <br />
-          <br />
-          <p class="fz28">並等待 數據變化時 進行更新</p>
-          <br />
-          <br />
+              <p class="fz28 cor36"># 訂閱者</p>
+              <br />
+              <br />
+              <p class="fz28">在 vue 中 每一個 掛載到 視圖上 的組件</p>
+              <br />
+              <br />
+              <p class="fz28">或 每一個 watcher</p>
+              <br />
+              <br />
+              <p class="fz28">都可 被看作是 一個 訂閱者</p>
+              <br />
+              <br />
+              <p class="fz28">他們 訂閱了 某一個 數據的變化</p>
+              <br />
+              <br />
+              <p class="fz28">並等待 數據變化時 進行更新</p>
+              <br />
+              <br />
 
-          <p class="fz28"># vue2 中 .sync 作用?</p>
-          <br />
-          <br />
-          <p class="fz28">首先 props 是單向數據流</p>
-          <br />
-          <br />
-          <p class="fz28">如果 子組件想 觸發 $emit 觸發@update:count</p>
-          <br />
-          <br />
-          <p class="fz28">vue3 v-model:count="count"</p>
-          <br />
-          <br />
+              <p class="fz28"># vue2 中 .sync 作用?</p>
+              <br />
+              <br />
+              <p class="fz28">首先 props 是單向數據流</p>
+              <br />
+              <br />
+              <p class="fz28">如果 子組件想 觸發 $emit 觸發@update:count</p>
+              <br />
+              <br />
+              <p class="fz28">vue3 v-model:count="count"</p>
+              <br />
+              <br />
+            </div>
+
+            <div class="padTwo"></div>
+
+            <div class="bgcVSMid"></div>
+
+            <div class="padTwo"></div>
+
+            <div>
+              <p class="fz28">
+                <a href="https://juejin.cn/post/7050418094233092104"
+                  >你了解v-model吗 @掘金</a
+                >
+              </p>
+              <br />
+              <br />
+              <br />
+              <p class="fz28">1.observer:對所有數據的屬性監聽</p>
+              <br />
+              <p class="fz28">2.compiler:將指令解析生效->更新</p>
+              <br />
+              <p class="fz28">3.watcher:數據變化調用update()函數</p>
+              <br />
+              <p class="fz28">4.Dep:data變化時先找依賴</p>
+              <br />
+              <p class="fz28">依賴:一個依賴對應到watcher</p>
+              <br />
+              <p class="fz28 cor36">流程</p>
+              <br />
+              <p class="fz28">1.new MVVM()</p>
+              <br />
+              <p class="fz28">2.Observer:劫持監聽所有的屬性</p>
+              <br />
+              <p class="fz28">3.commpiler:訂閱數據變化 綁訂到 watcher 上</p>
+              <br />
+              <p class="fz28">當監聽到變化 observer 通知變化給 Dep</p>
+              <br />
+              <p class="fz28">Dep 通知 watcher</p>
+              <br />
+              <p class="fz28">watcher 觸發 update()</p>
+              <br />
+              <p class="fz28">讓視圖更新 頁面重新渲染</p>
+              <br />
+              <p class="fz28"></p>
+              <br />
+            </div>
+          </div>
 
           <div id="" class="articleCardTitle cor36 fz30">
             [ vue ] ≫ vue 如何進行依賴收集?
           </div>
+
+          <p class="fz28">
+            template 裡的變量 ｛｛test1｝｝ 為 頁面上的模板 = 依賴
+          </p>
+          <br />
+          <p class="fz28">｛｛test2｝｝</p>
+          <br />
+          <p class="fz28">｛｛test3｝｝</p>
+          <br />
+          <p class="fz28">每個依賴有一個 key = test1 Watcher1</p>
+          <br />
+          <p class="fz28">key = test2 Watcher2</p>
+          <br />
+          <p class="fz28">key = test3 Watcher3</p>
+          <br />
+          <p class="fz28">需要 dep 進行管理</p>
+          <br />
+          <p class="fz28">
+            Dep1 deps = [ Watcher1,Watcher3 ] //Watcher1,Watcher3 依賴 Dep1
+            的內容
+          </p>
+          <br />
+          <p class="fz28">Dep2 deps = [ Watcher2 ]</p>
+          <br />
+
+          <p class="fz28">deps 數組將 Watcher1~3 的變化 進行 依賴收集</p>
+          <br />
+
+          <p class="fz28">當頁面變化 觸發 deps 中的 Watcher</p>
+          <br />
+          <p class="fz28 cor36">依賴收集 過程</p>
+          <br />
+          <p class="fz28">1.通過 defineReactive 為 key 創建 Dep 實例</p>
+          <br />
+          <p class="fz28">2.針對每個 key 對應的 變量 創建 Watcher</p>
+          <br />
+          <p class="fz28">3.獲取變量 test1</p>
+          <br />
+          <p class="fz28">用 getter 獲取 test1 中的方法 getter</p>
+          <br />
+          <p class="fz28">針對 test1 創建 Watcher1</p>
+          <br />
+          <p class="fz28">
+            在 getter 獲取時 將 Watcher1 添加到 test1 模板解析的 deps 上
+          </p>
+          <br />
+          <p class="fz28">4.當 test1 更新時 觸發 setter</p>
+          <br />
+          <p class="fz28">setter 從 Deps 上通知 watcher 進行更新</p>
+          <br />
+          <p class="fz28"></p>
+          <br />
+          <p class="fz28"></p>
+          <br />
+          <p class="fz28"></p>
+          <br />
+          <p class="fz28"></p>
+          <br />
+          <p class="fz28"></p>
+          <br />
+
           <p class="fz28">是實現響應式數據綁定的關鍵機制之一</p>
           <br />
           <br />
@@ -1533,27 +1643,71 @@ function locate(idPound) {
           </p>
           <br />
           <br />
+
           <p class="fz28">所以組件本質 -> 產生虛擬 DOM</p>
           <br />
           <br />
 
-          <p class="fz28"></p>
+          <div class="articleCardTitle cor36 fz30">[ vue ] ≫ vue 組件通信?</div>
+
+          <p class="fz28">父子組件通信</p>
           <br />
           <br />
 
-          <p class="fz28"></p>
+          <p class="fz28">兄弟組件通信</p>
           <br />
           <br />
-          <p class="fz28"></p>
+          <p class="fz28">祖孫 後代 通信</p>
           <br />
           <br />
-          <p class="fz28"></p>
+          <p class="fz28">非關係組件的通信</p>
           <br />
           <br />
+          <p class="fz28 cor36"># props 父傳子</p>
+          <br />
+          <div class="fz30">
+            <div><span class="comment">//父組件</span></div>
+            <div>
+              <span class="then">＜</span> <span class="word">Children</span>
+              <span class="word">name</span> <span class="then">=</span>
+              <span class="src">"wayne"</span> <span class="word">age</span>
+              <span class="then">=</span> <span class="number">18</span>
+              <span class="then">></span>
+            </div>
+            <br />
+            <div><span class="comment">//children子組件</span></div>
+            <div>
+              <span class="word">props:</span> <span class="brackets">{</span>
+            </div>
+            <div class="padTwo VSL">
+              <span class="word">name:</span>
+              <span class="brackets">String,</span>
+              <div>
+                <span class="word">age:</span> <span class="brackets">{</span>
+              </div>
+              <div class="padTwo VSL">
+                <span class="word">require:</span>
+                <span class="number">true</span> <span class="then">,</span>
+                <div>
+                  <span class="word">default:</span>
+                  <span class="number">18,</span>
+                </div>
+                <div>
+                  <span class="word">type:</span>
+                  <span class="brackets">Number</span>
+                </div>
+                <div></div>
+              </div>
 
-          <p class="fz28"></p>
+              <div></div>
+              <div><span class="brackets">}</span></div>
+            </div>
+            <div><span class="brackets">}</span></div>
+          </div>
           <br />
+          <p class="fz28 cor36"># $emit 子組件向父組件觸發</p>
           <br />
+          <div><span class="comment">//子組件</span></div>
 
           <p class="fz28"></p>
           <br />
