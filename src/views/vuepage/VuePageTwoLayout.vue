@@ -38,10 +38,10 @@ function locate(idPound) {
           <br />
           <!-- <RouterLink to="/js/jsthree">1.作用域</RouterLink> -->
           <div>
-            <RouterLink to="/vue">1.作用域</RouterLink>
+            <RouterLink to="/vue">1. Vue3</RouterLink>
           </div>
           <div>
-            <RouterLink to="/vue/vue3">2. Vue3</RouterLink>
+            <RouterLink to="/vue/vue2">2. Vue2</RouterLink>
           </div>
           <div>
             <RouterLink to="/vue">3.解構賦值</RouterLink>

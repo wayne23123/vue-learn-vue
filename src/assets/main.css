@@ -111,6 +111,10 @@ button {
   display: flex;
 }
 
+.wra {
+  flex-wrap: wrap;
+}
+
 .col {
   flex-direction: column;
 }
