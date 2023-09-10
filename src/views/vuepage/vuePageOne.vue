@@ -1113,6 +1113,183 @@ function locate(idPound) {
           </p>
           <br />
           <br />
+          <div id="" class="articleCardTitle cor36 fz36">
+            [ vue ] ≫ v-if v-for 哪個優先級更高?
+          </div>
+          <p class="fz28">
+            <a
+              href="https://v2.cn.vuejs.org/v2/guide/conditional.html#v-if-%E4%B8%8E-v-for-%E4%B8%80%E8%B5%B7%E4%BD%BF%E7%94%A8"
+              >vue2 文檔</a
+            ><a
+              href="https://cn.vuejs.org/guide/essentials/list.html#v-for-with-v-if"
+              >vue3 文檔</a
+            >
+          </p>
+          <br />
+          <br />
+          <br />
+          <p class="fz28">v-for 和 v-if 應該要避免在同一個標籤中使用</p>
+          <br />
+          <p class="fz28">在 vue2 中 v-for 優先級高於 v-if</p>
+          <br />
+          <p class="fz28">在 vue3 中 v-if 優先級高於 v-for</p>
+          <br />
+          <br />
+          <p class="fz28 cor36">
+            # 情況 1. 有一個列表 , 列表中有一個條件 決定要不要顯示
+          </p>
+          <br />
+          <p class="fz28 cor36"># 情況 1-1 vue2</p>
+          <p class="fz28 pEig">v-for > v-if</p>
+          <br />
+          <div class="fz30">
+            <div>
+              <span class="function">v-for</span> <span class="then">=</span>
+              <span class="src">"userinusers" </span>
+              <span class="function">v-if</span> <span class="then">=</span>
+              <span class="src">"user.isActive"</span>
+            </div>
+          </div>
+          <br />
+          <p class="fz28">不斷做循環 , 不斷條件判斷 isActive 是否為真</p>
+          <br />
+          <br />
+          <br />
+          <br />
+          <p class="fz28 cor36"># 情況 1-2 vue3</p>
+          <p class="fz28 pEig">v-if > v-for</p>
+          <br />
+          <div class="fz30">
+            <div>
+              <span class="function">v-for</span> <span class="then">=</span>
+              <span class="src">"user in users" </span>
+              <span class="function">v-if</span> <span class="then">=</span>
+              <span class="src">"user.isActive"</span>
+            </div>
+          </div>
+          <br />
+          <p class="fz28">vue 嘗試拿不存在的 user.isActive ...> 報錯</p>
+          <br />
+          <br />
+          <br />
+
+          <p class="fz28 cor36"># 情況 1. 改善</p>
+          <br />
+          <p class="fz28">定義一個 計算屬性 , 讓其返回 過濾後的 列表</p>
+          <br />
+          <p class="fz28">users.filter( (u) => u.isActive)</p>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <p class="fz28 cor36">
+            # 情況 2. 根據 一個 條件 直接決定 當前列表 要不要 顯示
+          </p>
+          <br />
+          <p class="fz28 cor36"># 情況 2-1 vue2</p>
+          <p class="fz28 pEig">v-for > v-if</p>
+          <br />
+          <div class="fz30">
+            <div>
+              <span class="function">v-for</span> <span class="then">=</span>
+              <span class="src">"user in users" </span>
+              <span class="function">v-if</span> <span class="then">=</span>
+              <span class="src">"sholdShowUsers"</span>
+            </div>
+          </div>
+          <br />
+          <p class="fz28">不斷先做 v-for 循環 再判斷 v-if 造成資源浪費</p>
+          <br />
+          <br />
+          <br />
+          <br />
+          <p class="fz28 cor36"># 情況 2-2 vue3</p>
+          <p class="fz28 pEig">v-if > v-for</p>
+          <br />
+
+          <p class="fz28">先 v-if 判斷 再 v-for 循環</p>
+          <br />
+          <br />
+          <br />
+
+          <p class="fz28 cor36"># 情況 2. 改善</p>
+          <br />
+
+          <p class="fz28">在 ul 直接 v-if 判斷 li 再做循環</p>
+          <br />
+
+          <div id="" class="articleCardTitle cor36 fz30">
+            [ vue ] ≫ v-show v-if ?
+          </div>
+
+          <p class="fz28">
+            v-if 如果條件不成立 , 不會渲染當前指令所在節點的 dom 元素
+          </p>
+          <br />
+          <br />
+          <p class="fz28">
+            v-show 只是 切換當前 dom 的顯示 或 隱藏 (條件不滿足 display:none)
+          </p>
+          <br />
+          <br />
+
+          <p class="fz28">
+            opacity 控制透明度 佔位 visiviblity 控制元素是否出現在頁面 佔位
+          </p>
+          <br />
+          <br />
+
+          <p class="fz28 cor36"># 如何選擇?</p>
+          <br />
+          <br />
+
+          <p class="fz28">
+            v-if 可以阻斷內部代碼是否執行 , 條件不成立 不執行內部邏輯
+          </p>
+          <br />
+          <br />
+          <p class="fz28">
+            頁面邏輯在第一次加載時 已被確認後續不會頻繁更改 用 v-if
+          </p>
+          <br />
+          <br />
+
+          <p class="fz28 cor36"># v-if v-show 寫一起?</p>
+          <br />
+          <br />
+
+          <p class="fz28">v-if 優先級更高</p>
+          <br />
+          <br />
+          <div id="" class="articleCardTitle cor36 fz36">
+            [ vue ] ≫ vue 中 key 的作用和原理?
+          </div>
+          <p class="fz28">key 的作用是 給每個 vnode 節點</p>
+          <br />
+          <p class="fz28">添加 唯一的 id</p>
+          <br />
+          <p class="fz28">作用是 為 diff 算法做優化</p>
+          <br />
+          <p class="fz28"></p>
+          <br />
+          <p class="fz28"></p>
+          <br />
+          <p class="fz28"></p>
+          <br />
+          <p class="fz28"></p>
+          <br />
+          <p class="fz28"></p>
+          <br />
+          <p class="fz28"></p>
+          <br />
+          <p class="fz28"></p>
+          <br />
+          <p class="fz28"></p>
+          <br />
+          <p class="fz28"></p>
+          <br />
           <div id="" class="articleCardTitle cor36 fz30">
             [ vue ] ≫ Vue要做權限管理怎麼做? 控制到按鈕級別權限怎麼做?
           </div>
@@ -1365,50 +1542,6 @@ function locate(idPound) {
           <p class="fz28">不利於搜索引擎的抓取。</p>
           <br />
           <p class="fz28">首次渲染速度相對較慢。</p>
-          <br />
-          <br />
-
-          <div id="" class="articleCardTitle cor36 fz30">
-            [ vue ] ≫ v-show v-if ?
-          </div>
-
-          <p class="fz28">
-            v-if 如果條件不成立 , 不會渲染當前指令所在節點的 dom 元素
-          </p>
-          <br />
-          <br />
-          <p class="fz28">
-            v-show 只是 切換當前 dom 的顯示 或 隱藏 (條件不滿足 display:none)
-          </p>
-          <br />
-          <br />
-
-          <p class="fz28">
-            opacity 控制透明度 佔位 visiviblity 控制元素是否出現在頁面 佔位
-          </p>
-          <br />
-          <br />
-
-          <p class="fz28 cor36"># 如何選擇?</p>
-          <br />
-          <br />
-
-          <p class="fz28">
-            v-if 可以阻斷內部代碼是否執行 , 條件不成立 不執行內部邏輯
-          </p>
-          <br />
-          <br />
-          <p class="fz28">
-            頁面邏輯在第一次加載時 已被確認後續不會頻繁更改 用 v-if
-          </p>
-          <br />
-          <br />
-
-          <p class="fz28 cor36"># v-if v-show 寫一起?</p>
-          <br />
-          <br />
-
-          <p class="fz28">v-if 優先級更高</p>
           <br />
           <br />
 
@@ -1668,7 +1801,8 @@ function locate(idPound) {
           <div class="fz30">
             <div><span class="comment">//父組件</span></div>
             <div>
-              <span class="then">＜</span> <span class="word">Children</span>
+              <span class="then">＜</span>
+              <span class="number">Children </span>
               <span class="word">name</span> <span class="then">=</span>
               <span class="src">"wayne"</span> <span class="word">age</span>
               <span class="then">=</span> <span class="number">18</span>
@@ -1705,9 +1839,54 @@ function locate(idPound) {
             <div><span class="brackets">}</span></div>
           </div>
           <br />
-          <p class="fz28 cor36"># $emit 子組件向父組件觸發</p>
+          <p class="fz28 cor36"># 子組件向父組件觸發</p>
+          <p class="pFou fz28">1.$emit</p>
+          <p class="pFou fz28">2.父@add</p>
+
+          <p class="pFou fz28">3.ref</p>
+
           <br />
-          <div><span class="comment">//子組件</span></div>
+          <br />
+
+          <div class="fz30">
+            <p class="cor36">1.$emit</p>
+
+            <div class="comment">
+              //子組件 透過 @emit() 觸發 自定義事件 add 參數 123
+            </div>
+            <div>
+              <span class="then">this</span>
+              <span class="variable">.$emit</span>
+              <span class="brackets">(</span> <span class="src">"add"</span>
+              <span class="src">,</span> <span class="number">123</span>
+              <span class="brackets">)</span>
+            </div>
+            <br />
+            <br />
+            <p class="cor36">2.父@add</p>
+
+            <div>
+              <span class="comment"
+                >//父組件通過add標示符@add="觸發父組件中方法"</span
+              >
+            </div>
+            <div>
+              <span class="comment"
+                >//父組件透過監聽方式來觸發父組件中方法,通過event來獲取參數</span
+              >
+            </div>
+            <div>
+              <span class="then">＜</span> <span class="number">Children </span>
+              <span class="then">@add=</span>
+              <span class="src">"cartAdd</span>
+              <span class="brackets">(</span> <span class="then">$event</span>
+              <span class="brackets">)</span> <span class="src">"</span>
+              <span class="then">></span>
+            </div>
+            <br />
+            <br />
+            <p class="cor36">3.ref</p>
+          </div>
 
           <p class="fz28"></p>
           <br />
