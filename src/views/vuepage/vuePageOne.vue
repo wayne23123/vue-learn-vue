@@ -1272,6 +1272,50 @@ function locate(idPound) {
           <br />
           <p class="fz28">作用是 為 diff 算法做優化</p>
           <br />
+          <p class="fz28">這樣可以 根據 key 更快更好的 找到 vnode 節點</p>
+          <br />
+          <br />
+          <p class="fz28 cor36"># 1. 不加 key</p>
+          <br />
+          <p class="fz28">vue 選擇 就地復用 原則</p>
+          <br />
+          <p class="fz28">最小化 移動 對應的 元素</p>
+          <br />
+          <p class="fz28">最大程度 重用相同的 元素</p>
+          <br />
+          <p class="fz28 cor36"># 2. 加 key</p>
+          <br />
+          <p class="fz28">veu 根據 key 的紀錄 找到 相關聯的 元素</p>
+          <br />
+          <p class="fz28">就知道 元素切換之前 和 切換之後 是如何變化的</p>
+          <br />
+          <p class="fz28 cor36"># 不推薦 index 做 key</p>
+          <br />
+          <p class="fz28">在增刪場景中 , 元素 index 可能會變</p>
+          <br />
+          <p class="fz28">diff 算法是比較 同級之間的不同 , 以 key 關聯</p>
+          <br />
+          <p class="fz28">當 數組進行下標變換 , 比如 刪 第一條數據</p>
+          <br />
+          <p class="fz28">之後 index 發生改變 , key 也跟著發生改變</p>
+          <br />
+          <p class="fz28">
+            所以 index 做 key 不穩定 , 可能導致性能浪費 , 導致 diff
+            無法關聯起上一次一樣的數據
+          </p>
+          <br />
+          <p class="fz28"></p>
+          <br />
+          <p class="fz28"></p>
+          <br />
+          <p class="fz28"></p>
+          <br />
+          <p class="fz28"></p>
+          <br />
+          <p class="fz28"></p>
+          <br />
+          <p class="fz28"></p>
+          <br />
           <p class="fz28"></p>
           <br />
           <p class="fz28"></p>
