@@ -37,13 +37,67 @@ function locate(idPound) {
       <div class="leftNavContainer">
         <div class="leftNavLayout">
           <br />
-          <div class="leftNavText">1</div>
-          <div class="leftNavText">1</div>
-          <div class="leftNavText">1</div>
-          <div class="leftNavText"></div>
-          <div class="leftNavText"></div>
-          <div class="leftNavText"></div>
-          <div class="leftNavText"></div>
+          <div @click="locate('vueOne001')" class="leftNavText">
+            對vue的理解
+          </div>
+          <div @click="locate('vueOne002')" class="leftNavText">什麼是MVVM</div>
+          <div @click="locate('vueOne003')" class="leftNavText">
+            MVVM和MVC和MVP區別
+          </div>
+          <div @click="locate('vueOne004')" class="leftNavText">
+            響應式數據的理解
+          </div>
+          <div @click="locate('vueOne005')" class="leftNavText">
+            事件綁定原理
+          </div>
+          <div @click="locate('vueOne006')" class="leftNavText">
+            雙向綁定使用和原理
+          </div>
+          <div @click="locate('vueOne007')" class="leftNavText">依賴收集</div>
+          <div @click="locate('vueOne008')" class="leftNavText">異步組件</div>
+          <div @click="locate('vueOne009')" class="leftNavText">nextTick</div>
+
+          <div @click="locate('vueOne010')" class="leftNavText">虛擬 DOM</div>
+
+          <div @click="locate('vueOne011')" class="leftNavText">diff 算法</div>
+
+          <div @click="locate('vueOne012')" class="leftNavText">
+            數據劫持和虛擬DOM
+          </div>
+
+          <div @click="locate('vueOne013')" class="leftNavText">生命週期</div>
+          <div @click="locate('vueOne014')" class="leftNavText">
+            v-if v-for 優先級
+          </div>
+
+          <div @click="locate('vueOne015')" class="leftNavText">
+            v-show v-if
+          </div>
+          <div @click="locate('vueOne016')" class="leftNavText">
+            v-for中key的作用
+          </div>
+          <div @click="locate('vueOne017')" class="leftNavText">權限管理</div>
+
+          <div @click="locate('vueOne018')" class="leftNavText">
+            Vue性能優化
+          </div>
+          <div @click="locate('vueOne019')" class="leftNavText">SPA</div>
+          <div @click="locate('vueOne020')" class="leftNavText">
+            Watch 和 computed 區別
+          </div>
+
+          <div @click="locate('vueOne021')" class="leftNavText">
+            ref 和 reactive 區別
+          </div>
+          <div @click="locate('vueOne022')" class="leftNavText">
+            組件化 的理解
+          </div>
+          <div @click="locate('vueOne023')" class="leftNavText">
+            vue 組件通信
+          </div>
+
+          <div @click="locate('vueOne01')" class="leftNavText"></div>
+          <div @click="locate('vueOne01')" class="leftNavText"></div>
         </div>
       </div>
     </div>
@@ -52,7 +106,7 @@ function locate(idPound) {
     <div class="Main">
       <div class="mainContainer">
         <div class="mainLayout">
-          <div class="articleCardTitle cor36 fz34">
+          <div id="vueOne001" class="articleCardTitle cor36 fz34">
             [ vue ] ≫ 對 vue 的理解?
           </div>
           <p class="fz28 cor36">1.</p>
@@ -125,7 +179,7 @@ function locate(idPound) {
           <br />
           <br />
 
-          <div id="onenote0" class="articleCardTitle cor36 fz30">
+          <div id="vueOne002" class="articleCardTitle cor36 fz30">
             [ vue ] ≫ 什麼是 MVVM ?
           </div>
 
@@ -162,10 +216,10 @@ function locate(idPound) {
           <br />
           <br />
 
-          <div id="onenote0" class="articleCardTitle cor36 fz30">
+          <div id="vueOne003" class="articleCardTitle cor36 fz30">
             [ vue ] ≫ MVVM 和 MVC 和 MVP 區別?
           </div>
-          <p class="fz28">MVC 是 model vue controller</p>
+          <p class="fz28">MVC 是 model view controller</p>
           <br />
           <p class="fz28">
             View 與使用者互動，當 View 接收到使用者的回饋 要拿資料時 , 呼叫
@@ -239,7 +293,7 @@ function locate(idPound) {
           <br />
           <br />
 
-          <div id="" class="articleCardTitle cor36 fz30">
+          <div id="vueOne004" class="articleCardTitle cor36 fz30">
             [ vue ] ≫ 對響應式數據的理解?
           </div>
 
@@ -444,7 +498,9 @@ function locate(idPound) {
           <br />
           <br />
 
-          <div class="articleCardTitle cor36 fz30">[ vue ] ≫ 事件綁定原理?</div>
+          <div id="vueOne005" class="articleCardTitle cor36 fz30">
+            [ vue ] ≫ 事件綁定原理?
+          </div>
           <p class="fz28">第一種 原生 DOM 事件綁定</p>
           <br />
           <br />
@@ -475,7 +531,7 @@ function locate(idPound) {
           <br />
           <br />
 
-          <div class="articleCardTitle cor36 fz30">
+          <div id="vueOne006" class="articleCardTitle cor36 fz30">
             [ vue ] ≫ 雙向綁定使用和原理?
           </div>
           <div class="dis">
@@ -620,7 +676,7 @@ function locate(idPound) {
             </div>
           </div>
 
-          <div id="" class="articleCardTitle cor36 fz30">
+          <div id="vueOne007" class="articleCardTitle cor36 fz30">
             [ vue ] ≫ vue 如何進行依賴收集?
           </div>
 
@@ -780,7 +836,7 @@ function locate(idPound) {
           <br />
           <br />
 
-          <div class="articleCardTitle cor36 fz30">
+          <div id="vueOne008" class="articleCardTitle cor36 fz30">
             [ vue ] ≫ 異步組件是什麼?
           </div>
 
@@ -807,7 +863,9 @@ function locate(idPound) {
           <br />
           <br />
 
-          <div class="articleCardTitle cor36 fz30">[ vue ] ≫ nextTick</div>
+          <div id="vueOne009" class="articleCardTitle cor36 fz30">
+            [ vue ] ≫ nextTick
+          </div>
 
           <p class="fz28 cor36"># Vue 為什麼會有 nextTick?</p>
           <br />
@@ -872,7 +930,7 @@ function locate(idPound) {
           <br />
           <br />
 
-          <div class="articleCardTitle cor36 fz30">
+          <div id="vueOne010" class="articleCardTitle cor36 fz30">
             [ vue ] ≫ 虛擬 DOM 是幹嘛用的?
           </div>
           <p class="fz28">因為 DOM 操作本身是是非常占用性能的,</p>
@@ -890,7 +948,7 @@ function locate(idPound) {
           <p class="fz28">這樣能達到性能優化的效果</p>
           <br />
           <br />
-          <div class="articleCardTitle cor36 fz30">
+          <div id="vueOne011" class="articleCardTitle cor36 fz30">
             [ vue ] ≫ Vue 的 diff 算法?
           </div>
           <p class="fz28">
@@ -961,7 +1019,7 @@ function locate(idPound) {
           <br />
           <br />
 
-          <div class="articleCardTitle cor36 fz30">
+          <div id="vueOne012" class="articleCardTitle cor36 fz30">
             [ vue ] ≫ Vue 通過數據劫持可以實現對數據在具體 DOM
             上的變化的精確檢測，為什麼 還要使用虛擬 DOM ?
           </div>
@@ -993,7 +1051,7 @@ function locate(idPound) {
           <br />
           <br />
 
-          <div id="" class="articleCardTitle cor36 fz30">
+          <div id="vueOne013" class="articleCardTitle cor36 fz30">
             [ vue ] ≫ Vue2的生命週期有哪些?
           </div>
 
@@ -1113,7 +1171,7 @@ function locate(idPound) {
           </p>
           <br />
           <br />
-          <div id="" class="articleCardTitle cor36 fz36">
+          <div id="vueOne014" class="articleCardTitle cor36 fz36">
             [ vue ] ≫ v-if v-for 哪個優先級更高?
           </div>
           <p class="fz28">
@@ -1220,7 +1278,7 @@ function locate(idPound) {
           <p class="fz28">在 ul 直接 v-if 判斷 li 再做循環</p>
           <br />
 
-          <div id="" class="articleCardTitle cor36 fz30">
+          <div id="vueOne015" class="articleCardTitle cor36 fz30">
             [ vue ] ≫ v-show v-if ?
           </div>
 
@@ -1263,7 +1321,7 @@ function locate(idPound) {
           <p class="fz28">v-if 優先級更高</p>
           <br />
           <br />
-          <div id="" class="articleCardTitle cor36 fz36">
+          <div id="vueOne016" class="articleCardTitle cor36 fz36">
             [ vue ] ≫ vue 中 key 的作用和原理?
           </div>
           <p class="fz28">key 的作用是 給每個 vnode 節點</p>
@@ -1334,7 +1392,7 @@ function locate(idPound) {
           <br />
           <p class="fz28"></p>
           <br />
-          <div id="" class="articleCardTitle cor36 fz30">
+          <div id="vueOne017" class="articleCardTitle cor36 fz30">
             [ vue ] ≫ Vue要做權限管理怎麼做? 控制到按鈕級別權限怎麼做?
           </div>
 
@@ -1418,7 +1476,7 @@ function locate(idPound) {
           <br />
           <br />
 
-          <div class="articleCardTitle cor36 fz30">
+          <div id="vueOne018" class="articleCardTitle cor36 fz30">
             [ vue ] ≫ 那些 Vue 性能優化方法?
           </div>
 
@@ -1536,7 +1594,9 @@ function locate(idPound) {
           <br />
           <br />
 
-          <div class="articleCardTitle cor36 fz30">[ vue ] ≫ 對 SPA 理解?</div>
+          <div id="vueOne019" class="articleCardTitle cor36 fz30">
+            [ vue ] ≫ 對 SPA 理解?
+          </div>
           <p class="fz28">是什麼? . 和 MPA? . 優缺</p>
           <br />
           <br />
@@ -1589,7 +1649,7 @@ function locate(idPound) {
           <br />
           <br />
 
-          <div id="" class="articleCardTitle cor36 fz30">
+          <div id="vueOne020" class="articleCardTitle cor36 fz30">
             [ vue ] ≫ Watch 和 computed 區別?
           </div>
           <p class="fz28 cor36"># computed</p>
@@ -1679,7 +1739,7 @@ function locate(idPound) {
           <br />
           <br />
 
-          <div id="" class="articleCardTitle cor36 fz30">
+          <div id="vueOne021" class="articleCardTitle cor36 fz30">
             [ vue ] ≫ ref 和 reactive 區別?
           </div>
           <p class="fz28">1.概念</p>
@@ -1761,7 +1821,7 @@ function locate(idPound) {
           <br />
           <br />
 
-          <div class="articleCardTitle cor36 fz30">
+          <div id="vueOne022" class="articleCardTitle cor36 fz30">
             [ vue ] ≫ 對 vue 組件化 的理解?
           </div>
 
@@ -1825,7 +1885,9 @@ function locate(idPound) {
           <br />
           <br />
 
-          <div class="articleCardTitle cor36 fz30">[ vue ] ≫ vue 組件通信?</div>
+          <div id="vueOne023" class="articleCardTitle cor36 fz30">
+            [ vue ] ≫ vue 組件通信?
+          </div>
 
           <p class="fz28">父子組件通信</p>
           <br />
@@ -1930,6 +1992,14 @@ function locate(idPound) {
             <br />
             <br />
             <p class="cor36">3.ref</p>
+            <br />
+            <p class="fz28 cor36"># 族先 後代子組件</p>
+            <p class="fz28">祖先組件 provide inject</p>
+            <br />
+            <br />
+            <p class="fz28">後代組件 inject</p>
+            <br />
+            <br />
           </div>
 
           <p class="fz28"></p>
@@ -2350,6 +2420,10 @@ section {
   display: flex;
   justify-content: center;
   overflow: auto;
+}
+
+.leftNav:hover {
+  z-index: 11;
 }
 
 .leftNavContainer {

@@ -28,6 +28,7 @@ ul {
   padding: 0 0 0 15px;
   /* background-color: #c4c4c4; */
   background-color: #000;
+  z-index: 12;
 }
 
 li {
