@@ -641,6 +641,19 @@ function locate(idPound) {
               <td><div class="pad10"></div></td>
             </tr>
           </table>
+          <br />
+
+          <br />
+          <br />
+
+          <br />
+          <br />
+
+          <br />
+          <br />
+
+          <br />
+          <p class="fz36 cor36"># 仍在施工中... 未完待續</p>
           <p class="fz28"></p>
           <br />
           <p class="fz28"></p>
@@ -649,17 +662,7 @@ function locate(idPound) {
           <br />
           <p class="fz28"></p>
           <br />
-          <div class="articleCardTitle cor36 fz34"></div>
-          <p class="fz28"></p>
-          <br />
-          <p class="fz28"></p>
-          <br />
-          <p class="fz28"></p>
-          <br />
-          <p class="fz28"></p>
-          <br />
-          <div class="articleCardTitle cor36 fz34"></div>
-          <p class="fz28"></p>
+
           <br />
           <p class="fz28"></p>
           <br />

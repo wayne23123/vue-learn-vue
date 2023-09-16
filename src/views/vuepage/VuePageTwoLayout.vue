@@ -43,9 +43,9 @@ function locate(idPound) {
           <div>
             <RouterLink to="/vue/vue2">2. Vue2</RouterLink>
           </div>
-          <div>
+          <!-- <div>
             <RouterLink to="/vue">3.解構賦值</RouterLink>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>

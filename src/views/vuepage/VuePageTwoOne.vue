@@ -564,9 +564,18 @@ function locate(idPound) {
           <br />
           <p class="fz28">簡單寫法 -> 簡單數據類型 , 直接監視</p>
           <br />
-          <p class="fz28"></p>
+
           <br />
-          <p class="fz28"></p>
+          <br />
+
+          <br />
+          <br />
+
+          <br />
+          <br />
+
+          <br />
+          <p class="fz36 cor36"># 仍在施工中... 未完待續</p>
           <br />
           <p class="fz28"></p>
           <br />
